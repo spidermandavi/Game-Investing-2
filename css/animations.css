@@ -1,0 +1,59 @@
+/* ===== BACKGROUND GRADIENT ===== */
+body {
+  background: linear-gradient(270deg, #0f1116, #1c1f2a, #0f1116);
+  background-size: 600% 600%;
+  animation: gradientMove 20s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== PLAYER TURN EFFECT ===== */
+.playerTurn {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 5px #fff; }
+  50% { box-shadow: 0 0 20px #fff; }
+  100% { box-shadow: 0 0 5px #fff; }
+}
+
+/* ===== PODIUM ANIMATION ===== */
+.podiumBlock {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: rise 0.8s ease forwards;
+}
+
+#firstPlace {
+  background: gold;
+  height: 150px;
+  animation-delay: 0.2s;
+}
+
+#secondPlace {
+  background: silver;
+  height: 120px;
+  animation-delay: 0.4s;
+}
+
+#thirdPlace {
+  background: #cd7f32;
+  height: 100px;
+  animation-delay: 0.6s;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
