@@ -1,0 +1,160 @@
+/* ===== BASE ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #eaeaea;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== TITLE ===== */
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* ===== GLASS PANELS ===== */
+#setup, #game, #podium {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-top: 20px;
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+th {
+  background: rgba(255,255,255,0.08);
+  font-weight: bold;
+}
+
+th, td {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 12px;
+  text-align: center;
+}
+
+/* Hover row */
+tr:hover {
+  background: rgba(255,255,255,0.05);
+  transform: scale(1.01);
+  transition: all 0.2s;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  margin: 3px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2c2f3a, #3a3f4f);
+  color: #eaeaea;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: linear-gradient(135deg, #3a3f4f, #4a5165);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* ===== COLORS ===== */
+.green { color: #4caf50; font-weight: bold; }
+.red { color: #f44336; font-weight: bold; }
+.neutral { color: #ccc; }
+
+/* ===== VISIBILITY ===== */
+.hidden {
+  display: none !important;
+}
+
+/* ===== INFO BAR ===== */
+#infoBar {
+  margin-top: 15px;
+  font-size: 1.3em;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.4s ease;
+}
+
+/* Glow effect */
+.playerTurn {
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
+}
+
+/* ===== POPUP ===== */
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#popupContent {
+  background: rgba(30,30,40,0.95);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 260px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+  animation: popupFade 0.3s ease;
+}
+
+#popup button {
+  margin-top: 15px;
+}
+
+/* ===== PODIUM ===== */
+#celebrationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.podiumBlock {
+  width: 120px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2em;
+  padding-top: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes popupFade {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
